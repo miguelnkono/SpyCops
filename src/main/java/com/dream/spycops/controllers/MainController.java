@@ -1,5 +1,7 @@
 package com.dream.spycops.controllers;
 
+import com.dream.spycops.routes.View;
+import com.dream.spycops.routes.ViewSwitcher;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -9,6 +11,6 @@ public class MainController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        ViewSwitcher.switcherTo(View.MAIN);
     }
 }
