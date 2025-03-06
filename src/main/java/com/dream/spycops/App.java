@@ -1,5 +1,6 @@
 package com.dream.spycops;
 
+import com.dream.spycops.dbUtils.DbUtils;
 import com.dream.spycops.routes.View;
 import com.dream.spycops.routes.ViewSwitcher;
 import javafx.application.Application;
@@ -28,7 +29,9 @@ public class App extends Application implements Initializable {
     }
 
     public static void main(String[] args) {
+        DbUtils.connect();
         launch();
+        DbUtils.close();
     }
 
     /**
